@@ -21,8 +21,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             buildConfigField "String", "BASEURL", "\"https://github.com/\""
             buildConfigField "String", "BASEAPIURL", "\"https://api.github.com\""
-            buildConfigField "String", "CLIEND_ID", "\"8e30442dfd7303b56197\""
-            buildConfigField "String", "CLIEND_SECRET", "\"b8cd0414ed4a4ac750e0b657f9179bb8b60411d5\""
+            buildConfigField "String", "CLIEND_ID", "\"680be0adb149c63fb057\""
+            buildConfigField "String", "CLIEND_SECRET", "\"f290fd35f86c7b5b34b6571ef41720aea7324fc9\""
         }
     }
 }

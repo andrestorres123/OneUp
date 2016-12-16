@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="font.montserrat.black">fonts/Montserrat-Black.otf</string>
+    <string name="font.montserrat.bold">fonts/Montserrat-Bold.otf</string>
+    <string name="font.montserrat.extra_bold">fonts/Montserrat-ExtraBold.otf</string>
+    <string name="font.montserrat.hairline">fonts/Montserrat-Hairline.otf</string>
+    <string name="font.montserrat.light">fonts/Montserrat-Light.otf</string>
+    <string name="font.montserrat.regular">fonts/Montserrat-Regular.otf</string>
+    <string name="font.montserrat.semibold">fonts/Montserrat-SemiBold.otf</string>
+    <string name="font.montserrat.ultralight">fonts/Montserrat-UltraLight.otf</string>
+</resources>

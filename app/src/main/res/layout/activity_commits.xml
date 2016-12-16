@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_commits"
     android:layout_width="match_parent"
@@ -8,11 +9,28 @@
     android:orientation="vertical"
     tools:context="com.andrestorres.oneup.ui.views.commits.CommitsActivity">
 
-    <include layout="@layout/toolbar"/>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <com.pixplicity.fontview.FontTextView
+        android:id="@+id/activity.commits.placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="No commits found for this repository or it may be private"
+        android:textSize="18dp"
+        app:pix_font="@string/font.montserrat.light"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/activity.commits.rv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:background="@android:color/white"
+        android:visibility="gone"/>
 
-</LinearLayout>
+</RelativeLayout>

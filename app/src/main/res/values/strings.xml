@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">OneUp</string>
+    <string name="activity.repositories.label">OneUp</string>
 </resources>

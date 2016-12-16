@@ -11,6 +11,11 @@ public class CommitsResponse {
     private String sha;
     private Commit commit;
 
+    public CommitsResponse(String sha, Commit commit) {
+        this.sha = sha;
+        this.commit = commit;
+    }
+
     public String getSha() {
         return sha;
     }

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.andrestorres.oneup.R;
 import com.andrestorres.oneup.models.responses.CommitsResponse;
@@ -45,7 +46,6 @@ public class CommitsActivity extends BaseActivity implements CommitsContract.Vie
 
     void setUpRepositoriesRecyclerView() {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.addItemDecoration(new SimpleDividerItemDecoration(this));
         mAdapter = new CommitsAdapter(this);
         mRecyclerView.setAdapter(mAdapter);
     }
@@ -53,5 +53,11 @@ public class CommitsActivity extends BaseActivity implements CommitsContract.Vie
     @Override
     public void onCommitsFetched(List<CommitsResponse> commitsReponses) {
         mAdapter.addAll(commitsReponses);
+        checkIfDataIsEmpty(commitsReponses);
+    }
+
+    void checkIfDataIsEmpty(List<CommitsResponse> commitsResponses){
+        if(!commitsResponses.isEmpty())
+            mRecyclerView.setVisibility(View.VISIBLE);
     }
 }

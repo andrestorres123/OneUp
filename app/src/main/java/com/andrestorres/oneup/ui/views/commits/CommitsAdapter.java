@@ -43,7 +43,9 @@ public class CommitsAdapter extends RecyclerView.Adapter<CommitsAdapter.ViewHold
         CommitsResponse commitReponse = mCommitReponses.get(position);
 
         holder.title.setText(commitReponse.getCommit().getMessage());
-        holder.author.setText(commitReponse.getCommit().getAuthor().getName());
+        holder.author.setText(String.format("%s (%s)",
+                commitReponse.getCommit().getAuthor().getName(),
+                commitReponse.getCommit().getAuthor().getEmail()));
     }
 
     @Override
